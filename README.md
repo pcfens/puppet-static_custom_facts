@@ -56,12 +56,12 @@ On a Linux box, this module uses `/opt/puppetlabs/facter/facts.d/`. On Windows
 Sets up the custom fact directory.
 
 **Parameters within `static_custom_facts`**
-`facts_path`: [String] The directory where custom facts should be stored. (defaults to an OS specific path)
-`facts_path_owner`: [String] The owner of the directory created by `facts_path` (defaults to root on Linux)
-`facts_path_group`: [String] The group owning the directory created by `facts_path` (defaults to root on Linux)
-`purge_unmanage`: [Boolean] If set to true, facts managed outside of Puppet, but in the `facts_path` directory
+- `facts_path`: [String] The directory where custom facts should be stored. (defaults to an OS specific path)
+- `facts_path_owner`: [String] The owner of the directory created by `facts_path` (defaults to root on Linux)
+- `facts_path_group`: [String] The group owning the directory created by `facts_path` (defaults to root on Linux)
+- `purge_unmanage`: [Boolean] If set to true, facts managed outside of Puppet, but in the `facts_path` directory
   will be removed (default: false)
-`custom_facts`: [Hash] A set of custom facts that should be automatically created. Commonly used with hiera/lookup.
+- `custom_facts`: [Hash] A set of custom facts that should be automatically created. Commonly used with hiera/lookup.
 
 ### Private Classes
 
