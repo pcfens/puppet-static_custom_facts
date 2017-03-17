@@ -1,0 +1,73 @@
+{
+  "name": "pcfens-static_custom_facts",
+  "version": "0.1.0",
+  "author": "pcfens",
+  "license": "Apache-2.0",
+  "summary": "A module to manage custom and static",
+  "source": "https://github.com/pcfens/puppet-static_custom_facts",
+  "project_page": "https://github.com/pcfens/puppet-static_custom_facts",
+  "issues_url": "https://github.com/pcfens/puppet-static_custom_facts/issues",
+  "tags": ["facter", "facts", "static facts"],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5.0",
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "21",
+        "22"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "Server 2012",
+        "Server 2012 R2"
+      ]
+    }
+  ],
+  "dependencies": [  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.0.0 < 5.0.0"
+    }
+  ]
+}
