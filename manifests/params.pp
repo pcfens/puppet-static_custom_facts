@@ -8,6 +8,12 @@ class static_custom_facts::params {
       $facts_path_owner = 'root'
       $facts_path_group = 'root'
     }
+    'OpenBSD': {
+      $parent_dirs = ['/etc/puppetlabs/facter']
+      $facts_path = '/etc/puppetlabs/facter/facts.d'
+      $facts_path_owner = 'root'
+      $facts_path_group = 'wheel'
+    }
     'Windows': {
       $parent_dirs = []
       $facts_path = 'C:/ProgramData/PuppetLabs/facter/facts.d'

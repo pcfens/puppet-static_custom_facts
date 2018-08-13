@@ -21,7 +21,7 @@ class static_custom_facts(
 ) inherits static_custom_facts::params {
 
   case $::kernel {
-    'Linux': {
+    'Linux', 'OpenBSD': {
       file { $parent_dirs:
         ensure  => directory,
         owner   => $facts_path_owner,
