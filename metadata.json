@@ -1,6 +1,6 @@
 {
   "name": "pcfens-static_custom_facts",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "pcfens",
   "license": "Apache-2.0",
   "summary": "A module to manage custom and static",
@@ -22,7 +22,8 @@
       "operatingsystemrelease": [
         "12.04",
         "14.04",
-        "16.04"
+        "16.04",
+        "18.04"
       ]
     },
     {
