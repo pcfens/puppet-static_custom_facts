@@ -23,9 +23,9 @@ class static_custom_facts(
   case $::kernel {
     'Linux', 'OpenBSD': {
       file { $parent_dirs:
-        ensure  => directory,
-        owner   => $facts_path_owner,
-        group   => $facts_path_group,
+        ensure => directory,
+        owner  => $facts_path_owner,
+        group  => $facts_path_group,
       }
 
       file { 'facts-directory':
