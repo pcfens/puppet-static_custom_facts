@@ -15,7 +15,31 @@ describe 'static_custom_facts', type: :class do
       it do
         is_expected.to contain_file('facts-directory').with(
           ensure: 'directory',
-          path: '/opt/puppetlabs/facter/facts.d'
+          path: '/opt/puppetlabs/facter/facts.d',
+          owner: 'root',
+          group: 'root'
+        )
+      end
+    end
+  end
+
+  context 'On a OpenBSD system' do
+    let :facts do
+      {
+        kernel: 'OpenBSD'
+      }
+    end
+
+    context 'defaults' do
+      it { is_expected.to compile.with_all_deps }
+      it { is_expected.to contain_class('static_custom_facts') }
+      it { is_expected.to contain_class('static_custom_facts::params') }
+      it do
+        is_expected.to contain_file('facts-directory').with(
+          ensure: 'directory',
+          path: '/etc/puppetlabs/facter/facts.d',
+          owner: 'root',
+          group: 'wheel'
         )
       end
     end

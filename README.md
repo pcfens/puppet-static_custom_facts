@@ -56,6 +56,7 @@ On a Linux box, this module uses `/opt/puppetlabs/facter/facts.d/`. On Windows
 Sets up the custom fact directory.
 
 **Parameters within `static_custom_facts`**
+- `parent_dirs`: [Array] Parent directories of facts_path to create
 - `facts_path`: [String] The directory where custom facts should be stored. (defaults to an OS specific path)
 - `facts_path_owner`: [String] The owner of the directory created by `facts_path` (defaults to root on Linux)
 - `facts_path_group`: [String] The group owning the directory created by `facts_path` (defaults to root on Linux)
