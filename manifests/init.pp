@@ -5,12 +5,14 @@
 # @example Delcaring the class
 #   include ::static_custom_facts
 #
+# @param parent_dirs Parent directories of facts_path to create
 # @param facts_path The location where custom facts will be installed
 # @param facts_path_owner The owner of the custom facts directory (not created by this module)
 # @param facts_path_group The group that owns the custom facts directory (not created by this module)
 # @param purge_unmanaged If facts in the facts_path not managed by puppet are deleted or not
 # @param custom_facts A hash of facts that should be created (useful with hiera)
 class static_custom_facts(
+  Array   $parent_dirs      = $static_custom_facts::params::parent_dirs,
   String  $facts_path       = $static_custom_facts::params::facts_path,
   String  $facts_path_owner = $static_custom_facts::params::facts_path_owner,
   String  $facts_path_group = $static_custom_facts::params::facts_path_group,
@@ -20,6 +22,12 @@ class static_custom_facts(
 
   case $::kernel {
     'Linux': {
+      file { $parent_dirs:
+        ensure  => directory,
+        owner   => $facts_path_owner,
+        group   => $facts_path_group,
+      }
+
       file { 'facts-directory':
         ensure  => directory,
         path    => $facts_path,
@@ -30,6 +38,9 @@ class static_custom_facts(
       }
     }
     'Windows': {
+      file { $parent_dirs:
+        ensure  => directory,
+      }
       file { 'facts-directory':
         ensure  => directory,
         path    => $facts_path,
