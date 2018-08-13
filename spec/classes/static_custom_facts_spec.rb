@@ -15,7 +15,7 @@ describe 'static_custom_facts', type: :class do
       it do
         is_expected.to contain_file('facts-directory').with(
           ensure: 'directory',
-          path: '/opt/puppetlabs/facter/facts.d'
+          path: '/opt/puppetlabs/facter/facts.d',
           owner: 'root',
           group: 'root'
         )
