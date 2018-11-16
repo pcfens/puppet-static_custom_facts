@@ -13,8 +13,8 @@
 # @param value The value of the fact (can include structured facts)
 # @param ensure Set to absent to explicitly remove the custom fact - behaves like a normal ensure parameter
 define static_custom_facts::fact (
-  Variant[String, Array, Hash, Numeric, Boolean] $value,
-  Enum['present', 'absent', 'file']              $ensure = present,
+  Data                              $value,
+  Enum['present', 'absent', 'file'] $ensure = present,
 ) {
   $yaml_value = {
     $name => $value,
