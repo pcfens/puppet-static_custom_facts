@@ -35,6 +35,14 @@ describe 'static_custom_facts', type: :class do
       it { is_expected.to contain_class('static_custom_facts') }
       it { is_expected.to contain_class('static_custom_facts::params') }
       it do
+        is_expected.to contain_file('/etc/puppetlabs/facter').with(
+          ensure: 'directory',
+          path: '/etc/puppetlabs/facter',
+          owner: 'root',
+          group: 'wheel',
+        )
+      end
+      it do
         is_expected.to contain_file('facts-directory').with(
           ensure: 'directory',
           path: '/etc/puppetlabs/facter/facts.d',
