@@ -2,12 +2,14 @@
   "name": "pcfens-static_custom_facts",
   "version": "0.2.0",
   "author": "pcfens",
-  "license": "Apache-2.0",
   "summary": "A module to manage custom and static",
+  "license": "Apache-2.0",
   "source": "https://github.com/pcfens/puppet-static_custom_facts",
   "project_page": "https://github.com/pcfens/puppet-static_custom_facts",
   "issues_url": "https://github.com/pcfens/puppet-static_custom_facts/issues",
-  "tags": ["facter", "facts", "static facts"],
+  "dependencies": [
+
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -70,11 +72,18 @@
       ]
     }
   ],
-  "dependencies": [  ],
   "requirements": [
     {
       "name": "puppet",
       "version_requirement": ">= 4.0.0 < 5.0.0"
     }
-  ]
+  ],
+  "tags": [
+    "facter",
+    "facts",
+    "static facts"
+  ],
+  "pdk-version": "1.7.1",
+  "template-url": "https://github.com/puppetlabs/pdk-templates",
+  "template-ref": "tags/1.7.1-0-g810b982"
 }
