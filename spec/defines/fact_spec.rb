@@ -15,16 +15,17 @@ describe 'static_custom_facts::fact', type: :define do
   context 'On Linux' do
     let :facts do
       {
-        kernel: 'Linux'
+        kernel: 'Linux',
       }
     end
 
     context 'with two contacts set' do
       let :params do
         {
-          value: ['user@email.com', 'email@user.com']
+          value: ['user@email.com', 'email@user.com'],
         }
       end
+
       it do
         is_expected.to contain_file('facts-responsible_contacts').with(
           path: '/opt/puppetlabs/facter/facts.d/responsible_contacts.yaml',
@@ -34,7 +35,7 @@ responsible_contacts:
 - user@email.com
 - email@user.com
 
-'
+',
         )
       end
     end

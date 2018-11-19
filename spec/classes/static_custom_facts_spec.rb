@@ -4,7 +4,7 @@ describe 'static_custom_facts', type: :class do
   context 'On a Linux system' do
     let :facts do
       {
-        kernel: 'Linux'
+        kernel: 'Linux',
       }
     end
 
@@ -17,7 +17,7 @@ describe 'static_custom_facts', type: :class do
           ensure: 'directory',
           path: '/opt/puppetlabs/facter/facts.d',
           owner: 'root',
-          group: 'root'
+          group: 'root',
         )
       end
     end
@@ -26,7 +26,7 @@ describe 'static_custom_facts', type: :class do
   context 'On a OpenBSD system' do
     let :facts do
       {
-        kernel: 'OpenBSD'
+        kernel: 'OpenBSD',
       }
     end
 
@@ -39,7 +39,7 @@ describe 'static_custom_facts', type: :class do
           ensure: 'directory',
           path: '/etc/puppetlabs/facter/facts.d',
           owner: 'root',
-          group: 'wheel'
+          group: 'wheel',
         )
       end
     end
@@ -48,7 +48,7 @@ describe 'static_custom_facts', type: :class do
   context 'On a Windows system' do
     let :facts do
       {
-        kernel: 'Windows'
+        kernel: 'Windows',
       }
     end
 
@@ -60,7 +60,7 @@ describe 'static_custom_facts', type: :class do
         is_expected.to contain_file('facts-directory').with(
           ensure: 'directory',
           path: 'C:/ProgramData/PuppetLabs/facter/facts.d',
-          recurse: false
+          recurse: false,
         )
       end
     end
