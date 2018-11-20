@@ -14,7 +14,7 @@ describe 'static_custom_facts', type: :class do
             ensure: 'directory',
           )
         end
-      end  
+      end
     end
   end
 
