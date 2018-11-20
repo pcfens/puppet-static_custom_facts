@@ -5,6 +5,11 @@
       bundler_args: --with system_tests
     docker_sets:
       - set: centos-7
+      - set: debian-8
+      - set: debian-9
+    includes:
+      - env: PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec
+        rvm: 2.5.1
   Gemfile:
     required:
       ':system_tests':
