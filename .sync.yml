@@ -1,0 +1,35 @@
+---
+  mock_with: ':rspec'
+  .travis.yml:
+    docker_defaults:
+      bundler_args: --with system_tests
+    docker_sets:
+      - set: centos-7
+      - set: debian-8
+      - set: debian-9
+    includes:
+      - env: PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec
+        rvm: 2.5.1
+  Gemfile:
+    required:
+      ':system_tests':
+        - gem: 'puppet-module-posix-system-r#{minor_version}'
+          platforms: ruby
+        - gem: 'puppet-module-win-system-r#{minor_version}'
+          platforms:
+            - mswin
+            - mingw
+            - x64_mingw
+        - gem: beaker
+          version: '~> 3.13'
+          from_env: BEAKER_VERSION
+        - gem: beaker-abs
+          from_env: BEAKER_ABS_VERSION
+          version: '~> 0.1'
+        - gem: beaker-pe
+        - gem: beaker-hostgenerator
+          from_env: BEAKER_HOSTGENERATOR_VERSION
+        - gem: beaker-rspec
+          from_env: BEAKER_RSPEC_VERSION
+        - gem: 'rspec-json_expectations'
+          version: '~> 2.1'
