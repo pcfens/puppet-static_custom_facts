@@ -90,7 +90,7 @@
     "facts",
     "static facts"
   ],
-  "pdk-version": "1.7.1",
+  "pdk-version": "1.8.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates",
-  "template-ref": "tags/1.7.1-0-g810b982"
+  "template-ref": "heads/master-0-g20af4c6"
 }
