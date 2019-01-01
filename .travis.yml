@@ -64,7 +64,7 @@ notifications:
   email: false
 deploy:
   provider: puppetforge
-  user: puppet
+  user: pcfens
   password:
     secure: ""
   on:
