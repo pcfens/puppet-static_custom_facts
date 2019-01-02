@@ -1,6 +1,8 @@
 ---
   mock_with: ':rspec'
   .travis.yml:
+    global_env:
+      - RUBYGEMS_VERSION=2.7.8
     docker_defaults:
       bundler_args: --with system_tests
     docker_sets:
