@@ -2,7 +2,12 @@ Changelog
 =========
 
 ## Unreleased
-[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.1.0...HEAD)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.0...HEAD)
+
+## [v0.3.0](https://github.com/pcfens/puppet-static_custom_facts/tree/v0.3.0)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.2.0...v0.3.0)
+
+- Use an alternative way to generate facts (explained [here](https://github.com/pcfens/puppet-static_custom_facts/pull/3/files#r235105312)) [\#3](https://github.com/pcfens/puppet-static_custom_facts/pull/3)
 
 ## [v0.2.0](https://github.com/pcfens/puppet-static_custom_facts/tree/v0.2.0)
 [Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.1.1...v0.2.0)
