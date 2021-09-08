@@ -2,7 +2,12 @@ Changelog
 =========
 
 ## Unreleased
-[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.0...HEAD)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.1...HEAD)
+
+## [v0.3.1(https://github.com/pcfens/puppet-static_custom_facts/tree/v0.3.1)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.0...v0.3.1)
+
+- Update various PDK components and compatibility metadata [\#4](https://github.com/pcfens/puppet-static_custom_facts/pull/4)
 
 ## [v0.3.0](https://github.com/pcfens/puppet-static_custom_facts/tree/v0.3.0)
 [Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.2.0...v0.3.0)
