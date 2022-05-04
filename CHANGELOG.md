@@ -2,7 +2,13 @@ Changelog
 =========
 
 ## Unreleased
-[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.1...HEAD)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.2...HEAD)
+
+## [v0.3.2(https://github.com/pcfens/puppet-static_custom_facts/tree/v0.3.2)
+[Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.1...v0.3.2)
+
+- Fix data/common.yaml syntax [\#6](https://github.com/pcfens/puppet-static_custom_facts/pull/6)
+
 
 ## [v0.3.1(https://github.com/pcfens/puppet-static_custom_facts/tree/v0.3.1)
 [Full Changelog](https://github.com/pcfens/puppet-static_custom_facts/compare/v0.3.0...v0.3.1)
